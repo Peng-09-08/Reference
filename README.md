@@ -6,6 +6,6 @@ https://ithelp.ithome.com.tw/articles/10203758
 https://dotblogs.com.tw/rainmaker/2013/07/17/111261
 
 ## 2. Replace string between two characters
-https://stackoverflow.com/questions/20701818/how-to-replace-the-text-between-two-characters-in-c-sharp
+https://stackoverflow.com/questions/20701818/how-to-replace-the-text-between-two-characters-in-c-sharp <br>
 `Ex:`
 
