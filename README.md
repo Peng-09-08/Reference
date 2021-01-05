@@ -58,8 +58,21 @@ var temp = str.Select((v, i) => new { Index = i, Value = v }).Where(x => x.Value
     .Select(x => x.Index).ToList(); //temp[0] = 2
 ```
 
-## 5. Initialize array
+## 5. Initialize and Compare array
 `Ex:`
 ```C#
+//Initialize
 int[] a = Array.CreateInstance(typeof(int), 5);
+```
+https://dotblogs.com.tw/rainmaker/2012/02/02/67456<br>
+
+```C#
+//Compare by SequenceEqual
+string[] array1 = new string[] { "Data", "Account", "credit", "Debit" }; 
+string[] array2 = new string[] { "Data1", "Account1", "credit", "Debit" }; 
+string[] array3 = new string[] { "Account", "credit", "Debit", "Data"};
+string[] array4 = new string[] { "Data", "Account", "credit", "Debit" }; 
+bool isarray12thesame = array1.SequenceEqual(array2); //false
+bool isarray13thesame = array1.SequenceEqual(array3); //false
+bool isarray14thesame = array1.SequenceEqual(array4); //true
 ```
