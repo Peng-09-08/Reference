@@ -76,3 +76,30 @@ bool isarray12thesame = array1.SequenceEqual(array2); //false
 bool isarray13thesame = array1.SequenceEqual(array3); //false
 bool isarray14thesame = array1.SequenceEqual(array4); //true
 ```
+
+## 6. Drag and Drop files
+```C#
+public partial class Form1 : Form 
+{
+    public Form1() 
+    {
+	InitializeComponent();
+	this.AllowDrop = true;
+        this.DragEnter += new DragEventHandler(Form1_DragEnter);
+        this.DragDrop += new DragEventHandler(Form1_DragDrop);
+    }
+
+    private void Form1_DragEnter(object sender, DragEventArgs e) 
+    {
+	if (e.Data.GetDataPresent(DataFormats.FileDrop)) 
+	    e.Effect = DragDropEffects.Copy;
+    }
+
+    private void Form1_DragDrop(object sender, DragEventArgs e) 
+    {
+	string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+	//...
+    }
+  }
+```
+
