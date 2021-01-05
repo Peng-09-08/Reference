@@ -3,7 +3,22 @@
 https://ithelp.ithome.com.tw/articles/10203758
 
 ## 1. Get Tab key from Winform
-https://dotblogs.com.tw/rainmaker/2013/07/17/111261
+https://dotblogs.com.tw/rainmaker/2013/07/17/111261<br>
+`Ex:`
+```C#
+protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+{
+	Keys keyPressed = (Keys)msg.WParam.ToInt32();
+	switch (keyPressed)
+	{
+		case Keys.Tab:
+			//...
+			return true;
+		default:
+			return base.ProcessCmdKey(ref msg, keyData);
+	}
+}
+```
 
 ## 2. Get/Replace string between two characters
 https://stackoverflow.com/questions/20701818/how-to-replace-the-text-between-two-characters-in-c-sharp<br>
@@ -34,3 +49,17 @@ Dictionary<int, int> temp = new Dictionary<int, int>()
 int result = temp.FirstOrDefault(x => x.Value == 4444).Key; //result = 4
 ```
 
+## 4. Find index of items in array
+https://stackoverflow.com/a/13291849<br>
+`Ex:`
+```C#
+string[] str = new string[] { "AA", "BB", "CC", "DD", "EE", "FF" };
+var temp = str.Select((v, i) => new { Index = i, Value = v }).Where(x => x.Value == "CC")
+    .Select(x => x.Index).ToList(); //temp[0] = 2
+```
+
+## 5. Initialize array
+`Ex:`
+```C#
+int[] a = Array.CreateInstance(typeof(int), 5);
+```
