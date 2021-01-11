@@ -59,13 +59,12 @@ var temp = str.Select((v, i) => new { Index = i, Value = v }).Where(x => x.Value
 ```
 
 ## 5. Initialize and Compare array
-`Ex:`
 ```C#
 //Initialize
 int[] a = Array.CreateInstance(typeof(int), 5);
 ```
 https://dotblogs.com.tw/rainmaker/2012/02/02/67456<br>
-
+`Ex:`
 ```C#
 //Compare by SequenceEqual
 string[] array1 = new string[] { "Data", "Account", "credit", "Debit" }; 
@@ -103,3 +102,19 @@ public partial class Form1 : Form
   }
 ```
 
+## 7. @符號用法
+https://dotblogs.com.tw/yypass2002/2013/08/13/114354<br>
+`Ex:`
+```C#
+//1. 限定字串
+string fileName = @"D:\Temp\Test.txt"; //D:\\Temp\\Test.txt
+
+//2. 字串跨行
+string test = @"ABC
+ DEF
+ GHI
+ J";
+
+//3. 將關鍵字作為識別字
+string @case = "123";
+```
