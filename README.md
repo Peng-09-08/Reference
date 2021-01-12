@@ -118,3 +118,27 @@ string test = @"ABC
 //3. 將關鍵字作為識別字
 string @case = "123";
 ```
+
+## 8. Set focus to form
+https://stackoverflow.com/a/7358286<br>
+`Ex:`
+```C#
+[DllImport("user32.dll")]
+static extern bool SetForegroundWindow(IntPtr hWnd);
+
+private void SetFocusToForm()
+{
+    //Set focus to CheckEEProm.exe after dragging file
+    Process currentProcess = Process.GetCurrentProcess();
+    IntPtr hWnd = currentProcess.MainWindowHandle;
+    if (hWnd != IntPtr.Zero)
+    SetForegroundWindow(hWnd);
+}
+
+private void textBox_DragDrop(object sender, DragEventArgs e)
+{
+    //拖曳檔案到textBox後，讓焦點回到form上
+    //...
+    SetFocusToForm();
+}
+```
