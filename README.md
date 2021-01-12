@@ -2,7 +2,7 @@
 * Markdown語法介紹
 https://ithelp.ithome.com.tw/articles/10203758
 
-## 1. Get Tab key from Winform
+## Get Tab key from Winform
 https://dotblogs.com.tw/rainmaker/2013/07/17/111261<br>
 `Ex:`
 ```C#
@@ -20,7 +20,7 @@ protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
 }
 ```
 
-## 2. Get/Replace string between two characters
+## Get/Replace string between two characters
 https://stackoverflow.com/questions/20701818/how-to-replace-the-text-between-two-characters-in-c-sharp<br>
 https://stackoverflow.com/questions/17252615/get-string-between-two-strings-in-a-string/17252672<br>
 `Ex:`
@@ -36,7 +36,7 @@ string replace = "Replace string";
 string result2 = regex.Replace(source, replace); //Replace string between two characters
 ```
 
-## 3. Get key of Dictionary by value
+## Get key of Dictionary by value
 `Ex:`
 ```C#
 Dictionary<int, int> temp = new Dictionary<int, int>()
@@ -49,7 +49,7 @@ Dictionary<int, int> temp = new Dictionary<int, int>()
 int result = temp.FirstOrDefault(x => x.Value == 4444).Key; //result = 4
 ```
 
-## 4. Find index of items in array
+## Find index of items in array
 https://stackoverflow.com/a/13291849<br>
 `Ex:`
 ```C#
@@ -58,7 +58,7 @@ var temp = str.Select((v, i) => new { Index = i, Value = v }).Where(x => x.Value
     .Select(x => x.Index).ToList(); //temp[0] = 2
 ```
 
-## 5. Initialize and Compare array
+## Initialize and Compare array
 ```C#
 //Initialize
 int[] a = Array.CreateInstance(typeof(int), 5);
@@ -76,7 +76,7 @@ bool isarray13thesame = array1.SequenceEqual(array3); //false
 bool isarray14thesame = array1.SequenceEqual(array4); //true
 ```
 
-## 6. Drag and Drop files
+## Drag and Drop files
 ```C#
 public partial class Form1 : Form 
 {
@@ -102,7 +102,7 @@ public partial class Form1 : Form
   }
 ```
 
-## 7. @符號用法
+## @符號用法
 https://dotblogs.com.tw/yypass2002/2013/08/13/114354<br>
 `Ex:`
 ```C#
@@ -119,7 +119,7 @@ string test = @"ABC
 string @case = "123";
 ```
 
-## 8. Set focus to form
+## Set focus to form
 https://stackoverflow.com/a/7358286<br>
 `Ex:`
 ```C#
@@ -132,7 +132,7 @@ private void SetFocusToForm()
     Process currentProcess = Process.GetCurrentProcess();
     IntPtr hWnd = currentProcess.MainWindowHandle;
     if (hWnd != IntPtr.Zero)
-    SetForegroundWindow(hWnd);
+        SetForegroundWindow(hWnd);
 }
 
 private void textBox_DragDrop(object sender, DragEventArgs e)
@@ -142,3 +142,7 @@ private void textBox_DragDrop(object sender, DragEventArgs e)
     SetFocusToForm();
 }
 ```
+
+## Button with 3D border
+https://stackoverflow.com/a/37485355
+
