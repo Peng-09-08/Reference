@@ -146,3 +146,6 @@ private void textBox_DragDrop(object sender, DragEventArgs e)
 ## Button with 3D border
 https://stackoverflow.com/a/37485355
 
+## 使用建置前事件命令列執行批次檔(執行檔)
+https://dotblogs.com.tw/killysss/2014/11/27/147445
+
