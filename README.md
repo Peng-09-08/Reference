@@ -151,3 +151,8 @@ https://dotblogs.com.tw/killysss/2014/11/27/147445
 
 ## 版本自動跳號
 https://blog.darkthread.net/blog/vs2019-no-auto-asm-version/
+
+## 新增自定義Macro
+View->Other Windows->Property Manager->展開Project->展開要新增的平台(EX:Debug|Win32)->在Microsoft.Cpp.Win32.user上按右鍵->選擇Properties
+->點選User Macros後新增/移除自定義Macro
+
